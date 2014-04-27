@@ -23,7 +23,7 @@ This does
 prompt, so you can easily find it as you scroll up.
 
 2. Git branch in prompt. If you are in a git repo, the current branch
-appears in the prompt, with an appended "*" if it is dirty.  This
+appears in the prompt, with an appended `*` if it is dirty.  This
 avoids the need to keep on typing `git status` to confirm you are on
 the correct branch.
 
