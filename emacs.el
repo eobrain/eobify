@@ -1,7 +1,8 @@
 ;; See README.md for description
 
 ;; Filter dired
-(add-hook 'dired-mode-hook (lambda () (dired-omit-mode)))
+(add-hook 'dired-load-hook '(lambda () (require 'dired-x)))
+(setq dired-omit-mode t)
 
 ;; Copy/Move to other dired
 (setq dired-dwim-target t)
@@ -11,5 +12,3 @@
 
 ;; CONTROL-Z for undo
 (global-set-key (kbd "C-z") 'undo)
-
-
