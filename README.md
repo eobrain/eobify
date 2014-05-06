@@ -59,3 +59,14 @@ copy will move or copy to the other directory.
 4. Undo is the single-key CONTROL-Z, which is much easier to quickly
 repeat than the default key binding.  (You can still run
 `suspend-frame` by doing the CONTROL-X-CONTROL-Z key sequence.)
+
+Xmonad
+------
+
+```sh
+sudo apt-get install gnome-panel
+sudo apt-get install xmonad
+cd
+mkdir ~/.xmonad
+touch ~/.xmonad/xmonad.hs
+```
