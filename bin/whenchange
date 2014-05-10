@@ -1,0 +1,15 @@
+#!/bin/sh
+
+# Requires:
+#   sudo apt-get install inotify-tools
+
+clear
+$*
+while true
+do
+    inotifywait --event modify --recursive --exclude '.*\.pyc' --exclude '\.*#.*'  . 
+    #echo '^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^'
+    clear
+    $*
+    #echo 'vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv'
+done

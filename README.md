@@ -39,6 +39,11 @@ gets all the history from your previous shells, so that you can use
 up-arrow or CONTROL-R to find those complicated command lines you used
 in the past.
 
+6. Adds the bin in this directory to your PATH, enabling:
+
+  a.  whenchange
+      (Requires `sudo apt-get install inotify-tools`)
+
 emacs.el
 -----
 

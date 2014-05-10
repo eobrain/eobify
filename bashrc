@@ -43,3 +43,5 @@ HISTSIZE=100000
 HISTFILESIZE=200000
 shopt -s histappend
 
+# (6) Add scripts
+export PATH=$PATH:$HOME/eobify/bin
