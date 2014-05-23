@@ -41,8 +41,15 @@ in the past.
 
 6. Adds the bin in this directory to your PATH, enabling:
 
-  a.  whenchange
+  a.  whenchange COMMAND
+      whenchange-popup COMMAND
       (Requires `sudo apt-get install inotify-tools`)
+      Run a command every time any file changes under the working directory.
+
+7. Adds aliases for some common commands
+
+  a. e-gitdiff
+     Do a graphical diff of the all the changed files.
 
 emacs.el
 -----
