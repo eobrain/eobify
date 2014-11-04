@@ -12,3 +12,11 @@
 
 ;; CONTROL-Z for undo
 (global-set-key (kbd "C-z") 'undo)
+
+;; Spellcheck comments
+(add-hook 'c++-mode-hook
+          (lambda ()
+            (flyspell-prog-mode)
+            ))
+;; restricts spellcheck to comments
+(setq flyspell-prog-text-faces '(font-lock-comment-face font-lock-doc-face))
