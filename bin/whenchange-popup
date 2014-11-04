@@ -1,0 +1,17 @@
+#!/bin/sh
+
+# Requires:
+#   sudo apt-get install inotify-tools expect-dev
+
+
+unbuffer $* | tee /tmp/$$
+notify-send --icon=gtk-add "$1" "`cat /tmp/$$`"
+
+while true
+do
+    inotifywait --event modify --recursive --exclude '.*\.pyc' --exclude '\.*#.*'  . 
+    echo '^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^'
+    unbuffer $* | tee /tmp/$$
+    notify-send --icon=gtk-add "$1" "`cat /tmp/$$`"
+    echo 'vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv'
+done
