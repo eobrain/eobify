@@ -1,15 +1,18 @@
-#!/bin/sh
+#!/bin/sh -x
 
 # Requires:
 #   sudo apt-get install inotify-tools
 
 clear
 $*
+date
 while true
 do
-    inotifywait --event modify --recursive --exclude '.*\.pyc' --exclude '\.*#.*'  . 
+    inotifywait --event modify --recursive --exclude '.*\.pyc'  --exclude '.*\.png' --exclude '\.*#.*'  . 
     #echo '^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^'
+    sleep 1
     clear
     $*
+    date
     #echo 'vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv'
 done

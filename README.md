@@ -48,7 +48,7 @@ in the past.
 
 7. Adds aliases for some common commands
 
-  a. e-gitdiff
+  a. gitdiff
      Do a graphical diff of the all the changed files.
 
 emacs.el

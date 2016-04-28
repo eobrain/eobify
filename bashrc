@@ -47,4 +47,4 @@ shopt -s histappend
 export PATH=$PATH:$HOME/eobify/bin
 
 # (7) Add some aliases
-alias e-git-diff='git difftool --dir-dif'
+alias gitdiff='git difftool --dir-dif'
