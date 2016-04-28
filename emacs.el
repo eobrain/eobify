@@ -17,6 +17,9 @@
 (global-set-key (kbd "<f5>") 'compile)
 (global-set-key (kbd "<f6>") 'next-error)
 
+;; Don't prompt for compile command each time
+(setq-default compilation-read-command nil)
+
 ;; Spellcheck comments
 (add-hook 'c++-mode-hook
           (lambda ()
