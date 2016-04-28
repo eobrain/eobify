@@ -1,4 +1,4 @@
-Setting up my Linux account just the way I like it
+Setting up my Linux or Mac just the way I like it
 ============
 
 Things I share between my various computers at home and work. This
@@ -10,7 +10,7 @@ then refer to the files in this directory from my various setup files.
 bashrc
 ----
 
-In the `~/.bashrc` file add
+In the `~/.bashrc` file on Linux (or `~/.bash_profile on Mac`) add
 ```sh
 . $HOME/eobify/bashrc
 ```
