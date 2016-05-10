@@ -36,7 +36,7 @@ trap 'timer_start' DEBUG
 export PROMPT_COMMAND='history -a; timer_stop'
 
 # Put the above together in the prompt.
-PS1=$LIGHT_CYAN$BAR'${timer_show}s $(parse_git_branch)'$NO_COLOUR\ $CYAN'$(short_path)'$NO_COLOUR$LIGHT_CYAN/\ \$$NO_COLOUR\ 
+PS1=$LIGHT_CYAN$BAR'${timer_show}s $(parse_git_branch)'$NO_COLOUR\ $CYAN'$(hostname -s):$(short_path)'$NO_COLOUR$LIGHT_CYAN/\ \$$NO_COLOUR\ 
 
 # (5) Shell History
 HISTSIZE=100000
