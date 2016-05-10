@@ -19,7 +19,12 @@ function parse_git_branch {
   git branch --no-color 2> /dev/null | sed -e '/^[^*]/d' -e "s/* \(.*\)/[\1$(parse_git_dirty)]/"
 }
 
-# (3) Short path in prompt
+# (3a) Short host in prompt
+function short_host {
+    hostname -s | awk -F - '{print $NF}'
+}
+
+# (3)b Short path in prompt
 function short_path {
     python -c "print '/'.join('$PWD'.split('/')[-2:])"
 }
@@ -36,7 +41,7 @@ trap 'timer_start' DEBUG
 export PROMPT_COMMAND='history -a; timer_stop'
 
 # Put the above together in the prompt.
-PS1=$LIGHT_CYAN$BAR'${timer_show}s $(parse_git_branch)'$NO_COLOUR\ $CYAN'$(hostname -s):$(short_path)'$NO_COLOUR$LIGHT_CYAN/\ \$$NO_COLOUR\ 
+PS1=$LIGHT_CYAN$BAR'${timer_show}s $(parse_git_branch)'$NO_COLOUR\ $CYAN'$(short_host):$(short_path)'$NO_COLOUR$LIGHT_CYAN/\ \$$NO_COLOUR\ 
 
 # (5) Shell History
 HISTSIZE=100000
