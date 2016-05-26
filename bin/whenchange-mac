@@ -1,0 +1,5 @@
+#!/bin/sh -x
+
+
+$*
+fswatch --print0 --exclude '#' --one-per-batch --recursive . | xargs -0 -n 1 -I {} $*

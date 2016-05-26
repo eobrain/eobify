@@ -1,0 +1,9 @@
+#!/bin/bash
+
+prefix=$(pwd|sed 's!^.*src/!!')
+
+for changed in $(git status --short | awk '{print $2}'); do
+    dirname "${prefix}/${changed}"
+done | sort -u | xargs -I {} $* {}
+                
+
