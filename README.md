@@ -54,7 +54,7 @@ in the past.
 emacs.el
 -----
 
-In the `~/.emacs` file add
+In the `~/.emacs` or `~/.emacs.d/user.el`  file add
 ```lisp
 (load-file "~/eobify/emacs.el")
 ```
