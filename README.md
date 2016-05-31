@@ -66,11 +66,11 @@ This does the following to your Emacs:
 2. When you have two dired buffers in two windows, then rename and
 copy will move or copy to the other directory.
 
-3. Indentation inserts spaces, not tab characters.
-
-4. Undo is the single-key CONTROL-Z, which is much easier to quickly
+3. Undo is the single-key CONTROL-Z, which is much easier to quickly
 repeat than the default key binding.  (You can still run
 `suspend-frame` by doing the CONTROL-X-CONTROL-Z key sequence.)
+
+(Works with https://github.com/bodil/ohai-emacs)
 
 Xmonad
 ------
