@@ -15,3 +15,6 @@
 
 ;; Don't prompt for compile command each time
 (setq-default compilation-read-command nil)
+
+;; In go, run gofmt before save
+(add-hook 'before-save-hook #'gofmt-before-save)
