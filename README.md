@@ -21,33 +21,25 @@ This does
 
 1. Prompt format. Adds a wide horizontal line and some colour to the
 prompt, so you can easily find it as you scroll up.
-
 2. Git branch in prompt. If you are in a git repo, the current branch
 appears in the prompt, with an appended `*` if it is dirty.  This
 avoids the need to keep on typing `git status` to confirm you are on
 the correct branch.
-
 3. Short path in prompt. Shows a shortened version of the current
 working directory in the prompt.
-
 4. Timer in prompt. Shows the number of seconds the last command took
 to execute.
-
 5. Shell History: Makes the shell history much longer and appends to
 it from all your shells in parallel.  When you create a new shell it
 gets all the history from your previous shells, so that you can use
 up-arrow or CONTROL-R to find those complicated command lines you used
 in the past.
-
 6. Adds the bin in this directory to your PATH, enabling:
-
   a.  whenchange COMMAND
       whenchange-popup COMMAND
       (Requires `sudo apt-get install inotify-tools`)
       Run a command every time any file changes under the working directory.
-
 7. Adds aliases for some common commands
-
   a. gitdiff
      Do a graphical diff of the all the changed files.
 
@@ -72,8 +64,8 @@ repeat than the default key binding.  (You can still run
 
 (Works with https://github.com/bodil/ohai-emacs)
 
-Xmonad
-------
+Xmonad (Linux Only)
+-------------------
 
 ```sh
 sudo apt-get install gnome-panel
