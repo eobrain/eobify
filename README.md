@@ -35,13 +35,13 @@ gets all the history from your previous shells, so that you can use
 up-arrow or CONTROL-R to find those complicated command lines you used
 in the past.
 6. Adds the bin in this directory to your PATH, enabling:
-  a.  whenchange COMMAND
-      whenchange-popup COMMAND
-      (Requires `sudo apt-get install inotify-tools`)
-      Run a command every time any file changes under the working directory.
+    a.  `whenchange` and variants that run a command every time any file changes under the working directory.  (Useful when when working in an edit-compile-test loop)
+        *   `whenchange COMMAND` or `whenchange-popup COMMAND` on Linux (Requires `sudo apt-get install inotify-tools`)
+        *   `whenchange-max COMMAND` on Mac (Requires `brew install fswatch`)
+
 7. Adds aliases for some common commands
-  a. gitdiff
-     Do a graphical diff of the all the changed files.
+    a.  gitdiff
+        Do a graphical diff of the all the changed files.
 
 emacs.el
 -----
