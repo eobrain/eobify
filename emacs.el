@@ -6,6 +6,8 @@
 ;; No indentation tabs
 (setq-default indent-tabs-mode nil)
 
+(setq-default fill-column 80)
+
 ;; CONTROL-Z for undo
 (global-set-key (kbd "C-z") 'undo)
 

@@ -8,7 +8,7 @@ $*
 date
 while true
 do
-    inotifywait --event modify --recursive --exclude '.*\.pyc'  --exclude '.*\.png' --exclude '\.*#.*'  . 
+    inotifywait --event modify --recursive --exclude '.*\.pyc'  --exclude '.*\.png' --exclude '\.*#.*' --exclude 'flycheck_.*' .
     #echo '^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^'
     sleep 1
     clear

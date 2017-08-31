@@ -9,7 +9,7 @@ notify-send --icon=gtk-add "$1" "`cat /tmp/$$`"
 
 while true
 do
-    inotifywait --event modify --recursive --exclude '.*\.pyc' --exclude '\.*#.*'  . 
+    inotifywait --event modify --recursive --exclude '.*\.pyc' --exclude '.*\.png' --exclude '\.*#.*' --exclude '#.*' . --exclude 'flycheck_.*' .
     echo '^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^'
     time unbuffer $* | tee /tmp/$$
     notify-send --icon=gtk-add "$1" "`cat /tmp/$$`"

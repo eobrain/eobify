@@ -1,0 +1,12 @@
+#!/bin/bash
+
+if [ "$#" != 1 ]; then
+    cat <<EOF
+      USAGE:
+        go test -coverprofile=/tmp/cov {package} && $(basename $0) /tmp/cov
+
+EOF
+    exit 1
+fi
+
+gocov convert $1|gocov report|awk '{patsplit($4, a, "[0-9]+"); printf("%3d %s\n", a[2]-a[1], $0)}' | sort -n
