@@ -80,5 +80,5 @@ sudo apt-get install gnome-panel
 sudo apt-get install xmonad
 cd
 mkdir ~/.xmonad
-touch ~/.xmonad/xmonad.hs
+ln -s ~/eobify/xmonad.hs .xmonad/
 ```
