@@ -1,0 +1,4 @@
+set -x
+sleep $1
+shift
+$*
