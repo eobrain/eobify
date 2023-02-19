@@ -34,7 +34,7 @@ This does
     it gets all the history from your previous shells, so that you can
     use up-arrow or CONTROL-R to find those complicated command lines
     you used in the past.
-6. Adds the bin in this directory to your PATH, enabling:
+6.  Adds the bin in this directory to your PATH, enabling:
     1.  `whenchange` and variants that run a command every time any
         file changes under the working directory. (Useful when when
         working in an edit-compile-test loop)
@@ -42,8 +42,11 @@ This does
             Linux (Requires `sudo apt-get install inotify-tools`)
         *   `whenchange-max COMMAND` on Mac (Requires `brew install
             fswatch`)
-7. Adds aliases for some common commands
+7.  Adds aliases for some common commands
     1.  `gitdiff` Do a graphical diff of the all the changed files.
+8.  Adds alias for `fuck` (See installation instructions in
+    https://github.com/nvbn/thefuck)
+
 
 emacs.el
 ---------
