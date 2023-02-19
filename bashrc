@@ -29,20 +29,10 @@ function short_host {
 #    python -c "print '/'.join('$PWD'.split('/')[-2:])"
 #}
 
-# (4) Timer in prompt.
-function timer_start {
-  timer=${timer:-$SECONDS}
-}
-function timer_stop {
-  timer_show=$(($SECONDS - $timer))
-  unset timer
-}
-trap 'timer_start' DEBUG
-export PROMPT_COMMAND='history -a; timer_stop'
+export PROMPT_COMMAND='history -a'
 
 # Put the above together in the prompt.
-#PS1=$LIGHT_CYAN$BAR'${timer_show}s $(parse_git_branch)'$NO_COLOUR\ $CYAN'$(short_host):$(short_path)'$NO_COLOUR$LIGHT_CYAN/\ \$$NO_COLOUR\ 
-PS1=$LIGHT_CYAN$BAR'${timer_show}s $(parse_git_branch)'$NO_COLOUR\ $CYAN'$(short_host):${PWD}'$NO_COLOUR$LIGHT_CYAN/\ \$$NO_COLOUR\ 
+PS1=$LIGHT_CYAN$BAR'$(parse_git_branch)'$NO_COLOUR\ $CYAN'$(short_host):${PWD}'$NO_COLOUR$LIGHT_CYAN/\ \$$NO_COLOUR\ 
 
 # (5) Shell History
 HISTSIZE=100000
